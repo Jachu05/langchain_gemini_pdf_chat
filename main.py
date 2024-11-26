@@ -3,8 +3,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=1)
 
-message = llm.invoke("Write me a ballad about LangChain")
+message = llm.invoke("""question: how are you
+                     answer:
+                     """)
 
 print(message.content)
